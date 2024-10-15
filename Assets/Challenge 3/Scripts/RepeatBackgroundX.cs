@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class RepeatBackgroundX : MonoBehaviour
 {
+    //starting position of background
     private Vector3 startPos;
+    //half the width of the background repeating
     private float repeatWidth;
 
     private void Start()
@@ -18,6 +20,7 @@ public class RepeatBackgroundX : MonoBehaviour
         // If background moves left by its repeat width, move it back to start position
         if (transform.position.x < startPos.x - repeatWidth)
         {
+            //move the background back to the starting position
             transform.position = startPos;
         }
     }
